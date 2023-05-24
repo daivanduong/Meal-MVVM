@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "86FDFEFB-A72C-4917-8A40-6EA3D58D7399"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "013B2022-E79A-4398-B0FA-09B006C86F6F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Meal-MVVM/ViewModel/DrinkViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "generateDrink(key:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "013B2022-E79A-4398-B0FA-09B006C86F6F - a602e71fc1e239cf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Meal_MVVM.DrinkViewModel.generateDrink(key: Swift.String) -&gt; ()"
+                  moduleName = "Meal-MVVM"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/DATA/IOS/Meal-MVVM/Meal-MVVM/ViewModel/DrinkViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "194">
+               </Location>
+               <Location
+                  uuid = "013B2022-E79A-4398-B0FA-09B006C86F6F - a602e71fc1e239cf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Meal_MVVM.DrinkViewModel.generateDrink(key: Swift.String) -&gt; ()"
+                  moduleName = "Meal-MVVM"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/DATA/IOS/Meal-MVVM/Meal-MVVM/ViewModel/DrinkViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "278">
+               </Location>
+               <Location
+                  uuid = "013B2022-E79A-4398-B0FA-09B006C86F6F - a602e71fc1e239cf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Meal_MVVM.DrinkViewModel.generateDrink(key: Swift.String) -&gt; ()"
+                  moduleName = "Meal-MVVM"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/DATA/IOS/Meal-MVVM/Meal-MVVM/ViewModel/DrinkViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "336">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7782390A-D101-4AB8-845D-699F3571F8E1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Meal-MVVM/ViewModel/DrinkViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "generateDrink(key:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7782390A-D101-4AB8-845D-699F3571F8E1 - c5cda369de7d58d7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Meal_MVVM.DrinkViewModel.generateDrink(key: Swift.String) -&gt; ()"
+                  moduleName = "Meal-MVVM"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/DATA/IOS/Meal-MVVM/Meal-MVVM/ViewModel/DrinkViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "123">
+               </Location>
+               <Location
+                  uuid = "7782390A-D101-4AB8-845D-699F3571F8E1 - a602e71fc1e239ee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Meal_MVVM.DrinkViewModel.generateDrink(key: Swift.String) -&gt; ()"
+                  moduleName = "Meal-MVVM"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/DATA/IOS/Meal-MVVM/Meal-MVVM/ViewModel/DrinkViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "179">
+               </Location>
+               <Location
+                  uuid = "7782390A-D101-4AB8-845D-699F3571F8E1 - a602e71fc1e239ee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Meal_MVVM.DrinkViewModel.generateDrink(key: Swift.String) -&gt; ()"
+                  moduleName = "Meal-MVVM"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/DATA/IOS/Meal-MVVM/Meal-MVVM/ViewModel/DrinkViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "194">
+               </Location>
+               <Location
+                  uuid = "7782390A-D101-4AB8-845D-699F3571F8E1 - a602e71fc1e239ee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Meal_MVVM.DrinkViewModel.generateDrink(key: Swift.String) -&gt; ()"
+                  moduleName = "Meal-MVVM"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/DATA/IOS/Meal-MVVM/Meal-MVVM/ViewModel/DrinkViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "278">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
