@@ -17,7 +17,6 @@ class CategriesMealViewModel {
                 let categoriesData = try! JSONDecoder().decode(CategoriesMeal.self, from: data)
                 self?.categoriesMeal = categoriesData
                 completion()
-                
             }
         }.resume()
     }
