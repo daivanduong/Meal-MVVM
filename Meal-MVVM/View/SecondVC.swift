@@ -30,9 +30,7 @@ class SecondVC: UIViewController {
         setupDrinkTable()
        
     }
-    
-    
-    
+ 
     func setupMealTable() {
         if let data_meal = UserDefaults.standard.data(forKey: "Meal") {
             arr_meal = try! PropertyListDecoder().decode(MealModel.self, from: data_meal)
@@ -43,7 +41,6 @@ class SecondVC: UIViewController {
         mealTable.delegate = self
         mealTable.dataSource = self
         mealTable.reloadData()
-        
         
     }
     func setupDrinkTable() {
@@ -64,11 +61,7 @@ class SecondVC: UIViewController {
 
 extension SecondVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if tableView == mealTable {
-            return  1
-        } else {
-            return 1
-        }
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

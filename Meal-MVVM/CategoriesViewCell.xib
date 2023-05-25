@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CategoriesViewCell" customModule="Meal_MVVM" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="402" height="201"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="402" height="201"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ef5-5P-ZNO">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="201"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oPS-5I-mTK">
+                                <rect key="frame" x="5" y="5" width="392" height="191"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="categoriesViewCell" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jv7-6p-A4d">
+                                        <rect key="frame" x="10" y="10" width="372" height="171"/>
+                                        <color key="backgroundColor" red="1" green="0.68959374159999998" blue="0.03310825203" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.68959374159999998" blue="0.03310825203" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="jv7-6p-A4d" secondAttribute="bottom" constant="10" id="7lx-md-RIM"/>
+                                    <constraint firstItem="jv7-6p-A4d" firstAttribute="leading" secondItem="oPS-5I-mTK" secondAttribute="leading" constant="10" id="XPT-eL-b6z"/>
+                                    <constraint firstAttribute="trailing" secondItem="jv7-6p-A4d" secondAttribute="trailing" constant="10" id="bMd-IG-mHz"/>
+                                    <constraint firstItem="jv7-6p-A4d" firstAttribute="top" secondItem="oPS-5I-mTK" secondAttribute="top" constant="10" id="xxG-dL-tPR"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="oPS-5I-mTK" firstAttribute="leading" secondItem="ef5-5P-ZNO" secondAttribute="leading" constant="5" id="Izt-cg-aKE"/>
+                            <constraint firstAttribute="bottom" secondItem="oPS-5I-mTK" secondAttribute="bottom" constant="5" id="Obe-sw-hrr"/>
+                            <constraint firstItem="oPS-5I-mTK" firstAttribute="top" secondItem="ef5-5P-ZNO" secondAttribute="top" constant="5" id="Xhx-Oz-bdk"/>
+                            <constraint firstAttribute="trailing" secondItem="oPS-5I-mTK" secondAttribute="trailing" constant="5" id="Yt8-qQ-xSj"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="ef5-5P-ZNO" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="APb-Rg-Ird"/>
+                <constraint firstAttribute="trailing" secondItem="ef5-5P-ZNO" secondAttribute="trailing" id="NT9-XM-UzQ"/>
+                <constraint firstItem="ef5-5P-ZNO" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="RVV-6j-1Jq"/>
+                <constraint firstAttribute="bottom" secondItem="ef5-5P-ZNO" secondAttribute="bottom" id="XsE-9w-fBG"/>
+            </constraints>
+            <size key="customSize" width="402" height="201"/>
+            <connections>
+                <outlet property="categoriesName" destination="jv7-6p-A4d" id="kOy-3L-7Bw"/>
+                <outlet property="viewCell" destination="ef5-5P-ZNO" id="NNb-vv-6wa"/>
+                <outlet property="viewLB" destination="oPS-5I-mTK" id="kzP-jA-14B"/>
+            </connections>
+            <point key="canvasLocation" x="398.47328244274809" y="41.197183098591552"/>
+        </collectionViewCell>
+    </objects>
+</document>

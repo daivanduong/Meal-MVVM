@@ -9,33 +9,33 @@ import UIKit
 
 class ViewController: UIViewController{
     
-    @IBOutlet weak var collectionView: UICollectionView!
-    
+    @IBOutlet weak var collectionViewMeal: UICollectionView!
     @IBOutlet weak var collectionViewDrink: UICollectionView!
     
+    
+    @IBOutlet weak var generateBT: UIButton!
+    
     var categoriesMealData: CategoriesMeal?
-    var viewModelCategoriesMeal = CategriesMealViewModel()
-    var viewModeDrink = DrinkViewModel()
     var viewModelMeal = MealViewModel()
+    var viewModeDrink = DrinkViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        setupCollectionView()
+        setupCollectionMeal()
         setupCollectionDrink()
-
+        setupButton()
     }
     
-    func setupCollectionView() {
-        viewModelCategoriesMeal.getDataAPICategoriesMeal { [weak self] in
-            self?.categoriesMealData = self?.viewModelCategoriesMeal.categoriesMeal
+    func setupCollectionMeal() {
+        viewModelMeal.getDataAPICategoriesMeal { [weak self] in
+            self?.categoriesMealData = self?.viewModelMeal.categoriesMeal
             DispatchQueue.main.async {
-                let nib = UINib(nibName: "CategoriesMealCVC", bundle: nil)
-                self?.collectionView.register(nib, forCellWithReuseIdentifier: "categoriesMealCVC")
-                
-                self?.collectionView.delegate = self
-                self?.collectionView.dataSource = self
-                self?.collectionView.reloadData()
+                let nib = UINib(nibName: "CategoriesViewCell", bundle: nil)
+                self?.collectionViewMeal.register(nib, forCellWithReuseIdentifier: "categoriesViewCell")
+                self?.collectionViewMeal.delegate = self
+                self?.collectionViewMeal.dataSource = self
+                self?.collectionViewMeal.reloadData()
             }
             
         }
@@ -45,13 +45,16 @@ class ViewController: UIViewController{
     func setupCollectionDrink() {
         
         viewModeDrink.getDataDrink {}
-        
-        let nib = UINib(nibName: "CategoriesMealCVC", bundle: nil)
-        collectionViewDrink.register(nib, forCellWithReuseIdentifier: "categoriesMealCVC")
+        let nib = UINib(nibName: "CategoriesViewCell", bundle: nil)
+        collectionViewDrink.register(nib, forCellWithReuseIdentifier: "categoriesViewCell")
         collectionViewDrink.delegate = self
         collectionViewDrink.dataSource = self
         collectionViewDrink.reloadData()
     
+    }
+    
+    func setupButton() {
+        generateBT.layer.cornerRadius = 5
     }
     
     
@@ -62,12 +65,10 @@ class ViewController: UIViewController{
     }
     
 }
-   
-
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == self.collectionView {
+        if collectionView == self.collectionViewMeal {
             return categoriesMealData?.categories?.count ?? 0
         }else {
             return self.viewModeDrink.categoriesDink.count
@@ -76,9 +77,9 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoriesMealCVC", for: indexPath) as! CategoriesMealCVC
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoriesViewCell", for: indexPath) as! CategoriesViewCell
         
-        if collectionView == self.collectionView {
+        if collectionView == self.collectionViewMeal {
             cell.categoriesName.text = categoriesMealData?.categories?[indexPath.row].strCategory
         }
         else {
@@ -89,27 +90,20 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        if collectionView == self.collectionView {
-            let w = (view.frame.width - 20) / 3
-            return CGSize(width: w, height: 80)
-        } else {
-            let w = (view.frame.width - 20) / 3
-            return CGSize(width: w, height: 80)
-        }
+        let w = (view.frame.width - 20) / 3
+        return CGSize(width: w, height: 80)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+      
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.contentView.backgroundColor = .blue
+        cell?.contentView.layer.cornerRadius = 10
+
         
-        if let cell = collectionView.cellForItem(at: indexPath){
-            cell.contentView.backgroundColor = .blue
-            cell.contentView.layer.cornerRadius = 10
-        }
-        
-        if collectionView == self.collectionView {
+        if collectionView == self.collectionViewMeal {
             let key = categoriesMealData?.categories?[indexPath.row].strCategory! ?? ""
             viewModelMeal.generateMeal(key: key)
-            
            
         } else {
             let key = viewModeDrink.categoriesDink[indexPath.row].nameDrink
@@ -117,10 +111,10 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         }
         
     }
+    
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        if let cell = collectionView.cellForItem(at: indexPath){
-            cell.contentView.backgroundColor = nil
-        }
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.contentView.backgroundColor = nil
     }
 
 }

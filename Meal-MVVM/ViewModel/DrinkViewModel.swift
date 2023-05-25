@@ -29,7 +29,6 @@ class DrinkViewModel {
             }
             UserDefaults.standard.set(try? PropertyListEncoder().encode(self?.drinkModel), forKey: "Drink")
             UserDefaults.standard.set(key, forKey: "Categories_Drink")
-            print(self!.drinkModel?.drinks?.count ?? 0)
         } .resume()
         
     }  

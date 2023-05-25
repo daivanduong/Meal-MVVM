@@ -34,12 +34,12 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aug-cT-Rne">
-                        <rect key="frame" x="150" y="98" width="140" height="30"/>
+                        <rect key="frame" x="150" y="83" width="140" height="30"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="WGN-ud-KaL"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="17"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -50,7 +50,7 @@
                     <constraint firstItem="SKg-Na-JKD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="CUj-hh-oTM"/>
                     <constraint firstAttribute="trailing" secondItem="q14-jz-K6v" secondAttribute="trailing" constant="30" id="S9W-nP-5ly"/>
                     <constraint firstItem="Aug-cT-Rne" firstAttribute="leading" secondItem="q14-jz-K6v" secondAttribute="leading" id="YRx-4x-HKB"/>
-                    <constraint firstItem="Aug-cT-Rne" firstAttribute="top" secondItem="q14-jz-K6v" secondAttribute="bottom" constant="20" id="aUE-wy-7n8"/>
+                    <constraint firstItem="Aug-cT-Rne" firstAttribute="top" secondItem="q14-jz-K6v" secondAttribute="bottom" constant="5" id="aUE-wy-7n8"/>
                     <constraint firstItem="q14-jz-K6v" firstAttribute="leading" secondItem="SKg-Na-JKD" secondAttribute="trailing" constant="30" id="zCz-nw-kMb"/>
                 </constraints>
             </tableViewCellContentView>

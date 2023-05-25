@@ -1,18 +1,19 @@
 //
-//  CategoriesMealCVC.swift
+//  CategoriesViewCell.swift
 //  Meal-MVVM
 //
-//  Created by Ocean97 on 22/05/2023.
+//  Created by Ocean97 on 25/05/2023.
 //
 
 import UIKit
 
-class CategoriesMealCVC: UICollectionViewCell {
+class CategoriesViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var categoriesName: UILabel!
     @IBOutlet weak var viewCell: UIView!
     
     @IBOutlet weak var viewLB: UIView!
+    
+    @IBOutlet weak var categoriesName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
