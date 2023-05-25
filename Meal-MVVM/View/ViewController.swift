@@ -18,6 +18,8 @@ class ViewController: UIViewController{
     var categoriesMealData: CategoriesMeal?
     var viewModelMeal = MealViewModel()
     var viewModeDrink = DrinkViewModel()
+    var mealSelect = false
+    var drinkSelect = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +57,8 @@ class ViewController: UIViewController{
     
     func setupButton() {
         generateBT.layer.cornerRadius = 5
+        generateBT.backgroundColor = .systemIndigo
+        generateBT.isEnabled = false
     }
     
     
@@ -99,15 +103,12 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         let cell = collectionView.cellForItem(at: indexPath)
         cell?.contentView.backgroundColor = .blue
         cell?.contentView.layer.cornerRadius = 10
-
         
-        if collectionView == self.collectionViewMeal {
-            let key = categoriesMealData?.categories?[indexPath.row].strCategory! ?? ""
-            viewModelMeal.generateMeal(key: key)
-           
-        } else {
-            let key = viewModeDrink.categoriesDink[indexPath.row].nameDrink
-            viewModeDrink.generateDrink(key: key)
+        if mealSelect == true {
+            if drinkSelect == true {
+                generateBT.isEnabled = true
+                generateBT.backgroundColor = .blue
+            }
         }
         
     }
@@ -116,5 +117,19 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         let cell = collectionView.cellForItem(at: indexPath)
         cell?.contentView.backgroundColor = nil
     }
-
+    
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        if collectionView == self.collectionViewMeal {
+            let key = categoriesMealData?.categories?[indexPath.row].strCategory! ?? ""
+            viewModelMeal.generateMeal(key: key)
+            mealSelect = true
+           
+        } else {
+            let key = viewModeDrink.categoriesDink[indexPath.row].nameDrink
+            viewModeDrink.generateDrink(key: key)
+            drinkSelect = true
+        }
+        return true
+    }
+    
 }
